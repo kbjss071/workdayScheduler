@@ -17,6 +17,14 @@ div {
   display: block;
 }
 
+textarea {
+  box-sizing: border-box;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+
 
 /* class selector */
 
@@ -84,40 +92,43 @@ div {
 
 .timeblock {
   display: flex;
-  height: 65px;
+  height: 75px;
   width: auto;
   vertical-align: middle;
 }
 
 .time {
   box-sizing: border-box;
-  display: inline-block;
-  height: 64px;
+  display: flex;
+  height: 74px;
   width: 10%;
-  align-content: center;
   border-top: 1px dashed black;
+  justify-content: center;
 }
 
 .time > p {
   display: flex;
   box-sizing: border-box;
-  text-align: center;
+  align-items: center;
 }
 
 .todo {
-  height: 64px;
+  height: 74px;
   width: 80%;
   display: inline-block;
-  border: 1px solid black;
+  border-left: #000000 1px;
+  border-right: #000000 1px;
 }
 
 .save {
-  height: 64px;
+  height: 74px;
   width: 10%;
   display: inline-block;
-  border: 1px solid red;
   text-align: center;
   align-items: center;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  background-color: #06AED5;
 }
 
 .fa-save {
@@ -126,9 +137,15 @@ div {
 }
 
 /* id selector */
+#inform {
+  text-align: center;
+}
 
 @media screen and (max-width: 520px) {
     .timeblock{
       font-size: small;
+    }
+    .fa-save {
+      font-size: 15px;
     }
 }
